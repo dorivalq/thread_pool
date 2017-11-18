@@ -1,4 +1,4 @@
-package com.silva.socket.thread;
+package com.silva.socket.work;
 
 import java.io.IOException;
 import java.io.OutputStream;

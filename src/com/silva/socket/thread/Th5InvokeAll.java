@@ -10,12 +10,13 @@ import java.util.concurrent.Future;
 public class Th5InvokeAll {
 	public static void main(String[] args) throws InterruptedException {
 		ExecutorService pool = Executors.newWorkStealingPool();
-		List<Callable<String>> callales = Arrays.asList(
+		List<Callable<String>> callables = Arrays.asList(
 				()->"Task1",
 				()->"Task2",
 				()->"Task3"
 				);
-		List<Future<String>> futures = pool.invokeAll(callales);	
+		List<Future<String>> futures = pool.invokeAll(callables);	
+//		futures.get(0)
 		futures.stream().map(future ->{
 			try {
 				return future.get();
